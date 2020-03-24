@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <title>sign in form</title>
+</head>
+
+<body>
+    <div class="block-body">
+        <div class="mainer">
+
+            <div class="action">
+                <div class="link"><a href="#form-sign" class="link-sign">Sign in</a></div>
+                <div class="link"><a href="#form-join">Join us</a></div>
+            </div>
+
+            <form action="#" class="form-sign" method="GET" id="form-sign">
+                <label for="username">Username</label>
+                <input required type="text" name="username" id="username" minlength="3">
+                <div class="eror">eror</div>
+                <label for="password">Password</label>
+                <input required type="password" name="password" id="password" minlength="8">
+                <div class="eror">eror</div>
+                <div class="form-sign__checkbox">
+                    <input type="checkbox" name="yes" id="yes">
+                    <label for="yes"><span class="checkbox-yes">✓</span>Keep me signed in</label>
+                </div>
+                <button type="submit" class="form__btn">Sign in</button>
+                <div class="form-sign__footer">
+                    <a href="">Forgot password</a>
+                    <a href="">Create an account</a>
+                </div>
+            </form>
+
+            <form action="#" class="form-join" method="GET" id="form-join">
+                <label for="username">Username</label>
+                <input required type="text" name="username" id="username-j" minlength="3">
+                <div class="eror">eror</div>
+                <label for="password">Password</label>
+                <input required type="password" name="password" id="password-j" minlength="8">
+                <div class="eror">eror</div>
+                <div class="repeat_password">
+                    <label>Repeat password</label>
+                    <input type="password" name="repeat_password" id="repeat_password-j" minlength="8">
+                    <div class="eror">eror</div>
+                </div>
+                <button type="submit" class="form__btn">Sign in</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="plugins/jquery.mask.min.js"></script>
+
+
+</body>
+
+</html>

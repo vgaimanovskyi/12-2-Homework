@@ -1,0 +1,244 @@
+body {
+    background: #e5eeee;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+body, form, div, p, a, img, h1, h2, h3, h4, h5, h6, table, table tr, table td {
+    border: none;
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: underline;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+h1, h2 {
+    font-size: 20px;
+    padding: 0 0 10px 0;
+    color: #545454;
+}
+
+/* block-form */
+.block-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);         
+    width: 400px;
+    background-image: url(../images/b.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.block-body::before {
+    position: absolute;
+    width: calc(100% + 20px);
+    left: -10px;
+    bottom: -5px;
+    content: '';
+    box-shadow: 0 0 70px 20px rgba(2, 41, 120, 0.8);
+}
+.block-body::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: linear-gradient( 58deg, rgb(48,35,174) 0%, rgb(124,72,195) 53%, rgb(200,109,215) 100%);
+    opacity: 0.7;
+}
+.mainer {
+    position: relative;
+    width: 260px;
+    margin: 50px auto;
+    z-index: 1;
+}
+/* action */
+.action {
+    margin: 0 0 50px 0;
+}
+.action .link {
+    display: inline-block;
+    margin: 0 25px 0 0;
+}
+.action a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #e1c2f1;
+}
+.action a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #e66a64;
+    transition: 0.3s;
+}
+.action a:focus,
+.action a:hover {
+    color: #fbf6e4;
+}
+.action a:focus::after,
+.action .link:hover a::after {
+    width: 100%;
+}
+
+/* form-sign */
+.form-sign:not(:target) {
+    display: none;
+}
+label {
+    display: block;
+    color: #fbf6e4;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 18px 0 5px 0;
+}
+[type="text"],
+[type="password"] {
+    width: 100%;
+    line-height: 38px;
+    font-size: 18px;
+    border: 2px solid #bfb9cc;
+    background-color: transparent;
+    padding: 2px 5px;
+    color: #fbf6e4;
+}
+[type="text"]:focus,
+[type="password"]:focus {
+    border: 2px solid #23ae92;
+}
+.eror {
+    font-size: 14px;
+    font-weight: 700;
+    color: red;
+    display: block;
+}
+input:valid + .eror {
+    visibility: hidden;
+}
+.form-sign__checkbox {
+    display: flex;
+    margin: 18px 0 5px 0;
+    align-items: center;
+}
+.form-sign__checkbox [type="checkbox"] {
+    width: 0;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+}
+.form-sign__checkbox label {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #fbf6e4;
+    margin: 0;
+    cursor: pointer;
+}
+.checkbox-yes {
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: #e66a64;
+    border: 1px solid transparent;
+    margin: 0 5px 0 0;
+    transition-duration: 0.5s;
+}
+.form-sign__checkbox [type="checkbox"]:checked + label .checkbox-yes {
+    font-size: 13px;
+    background-color: #23ae92;
+}
+.form-sign__checkbox [type="checkbox"]:focus + label .checkbox-yes {
+    border: 1px solid #fbf6e4;
+}
+.form__btn {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fbf6e4;
+    background-color: #23ae92;
+    border: 2px solid #23ae92;
+    padding: 13px;
+    margin: 41px 0 0 0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.form__btn:focus {
+    border: 2px solid #fbf6e4;
+}
+.form__btn:active {
+    border: 2px solid #fbf6e4;
+    background-color: #e66a64;
+}
+.form-sign__footer {
+    width: 100%;
+    margin: 33px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.form-sign__footer a {
+    position: relative;
+    font-size: 13px;
+    color: #b9b9cc;
+    text-decoration: none;
+}
+.form-sign__footer a::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #b9b9cc;
+    transition: all 0.5s ease;
+}
+.form-sign__footer a:focus::after,
+.form-sign__footer a:hover::after {
+    bottom: -25px;
+    opacity: 0;
+}
+/* form-join */
+.form-join:not(:target) {
+    display: none;
+}
+.repeat_password {
+    display: none;
+}
